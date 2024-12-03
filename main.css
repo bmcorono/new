@@ -62,69 +62,50 @@ body {
 }
 
 .text-content h2 {
-  font-size: 32px;
+  font-size: 28px;
   margin-bottom: 10px;
 }
 
 .text-content h1 {
-  font-size: 64px;
+  font-size: 50px;
   margin-bottom: 20px;
 }
 
 .text-content p {
-  font-size: 24px;
+  font-size: 22px;
   margin-bottom: 30px;
 }
 
 .profile-img {
-  max-width: 400px;
+  max-width: 500px;
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
 }
 
-/* Section Styles */
-.content-section {
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.content-section h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.box {
+/* About Section */
+.about-container {
   display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.box-item {
-  border: 1px solid #fff;
-  border-radius: 8px;
+  justify-content: space-between;
   padding: 20px;
-  max-width: 300px;
-  text-align: center;
+  align-items: center;
 }
 
-.box-item img {
+.text-about p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+.about-img {
+  max-width: 300px;
+  margin-left: 20px;
+}
+
+.about-img img {
   width: 100%;
   border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.contact-img {
-  max-width: 400px;
-  width: 100%;
-  margin: 20px auto;
-  display: block;
-}
-
-textarea {
-  width: 100%;
-  margin: 20px 0;
 }
 
 .btn {
@@ -137,8 +118,18 @@ textarea {
   text-decoration: none;
   font-size: 16px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .btn:hover {
   background-color: #ddd;
 }
+
+/* Skills Section */
+.content-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.content-section h2 {
+  font-size: 
