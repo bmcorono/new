@@ -51,7 +51,7 @@ body {
 
 /* Hero Section */
 .hero {
-  background-image: url('background .JPG');
+  background-image: url('background.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -59,6 +59,15 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 20px;
+}
+
+.hero-content {
+  display: flex;
+  gap: 30px;
+}
+
+.text-content {
+  max-width: 50%;
 }
 
 .text-content h2 {
@@ -69,6 +78,7 @@ body {
 .text-content h1 {
   font-size: 50px;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .text-content p {
@@ -77,17 +87,18 @@ body {
 }
 
 .profile-img {
-  max-width: 500px;
+  max-width: 400px;
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
+  margin-left: 20px;
 }
 
 /* About Section */
 .about-container {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 40px 20px;
   align-items: center;
 }
 
@@ -98,13 +109,9 @@ body {
   max-width: 600px;
 }
 
-.about-img {
-  max-width: 300px;
-  margin-left: 20px;
-}
-
 .about-img img {
   width: 100%;
+  max-width: 300px;
   border-radius: 8px;
 }
 
@@ -119,17 +126,111 @@ body {
   font-size: 16px;
   cursor: pointer;
   margin-top: 10px;
+  transition: background-color 0.3s ease;
 }
 
 .btn:hover {
   background-color: #ddd;
 }
 
-/* Skills Section */
-.content-section {
-  padding: 80px 20px;
-  text-align: center;
+/* Services and Portfolio */
+.box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px 20px;
 }
 
-.content-section h2 {
-  font-size: 
+.box-item {
+  max-width: 300px;
+  text-align: center;
+  border: 1px solid #555;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #444;
+}
+
+.box-item img {
+  width: 100%;
+  border-bottom: 1px solid #555;
+}
+
+.box-item h3 {
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+.box-item p {
+  font-size: 14px;
+  padding: 0 10px 15px;
+  line-height: 1.5;
+}
+
+.learn-more {
+  display: inline-block;
+  background-color: #fff;
+  color: #333;
+  padding: 5px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.learn-more:hover {
+  background-color: #ddd;
+}
+
+/* Contact Section */
+#contact {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #444, #222);
+  color: #fff;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+  resize: none;
+}
+
+.contact-form button {
+  background-color: #fff;
+  color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #ddd;
+}
