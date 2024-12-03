@@ -3,75 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Portfolio</title>
-  <link rel="stylesheet" href="main.css">
+  <title>Micaella Joy's Website</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <header class="hero">
-    <div class="container">
-      <nav class="navbar">
-        <div class="logo">MJ</div>
-        <ul class="nav-links">
-          <li><a href="#" class="nav-btn" data-page="home">Home</a></li>
-          <li><a href="#" class="nav-btn" data-page="about">About</a></li>
-          <li><a href="#" class="nav-btn" data-page="contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Main Sections -->
-  <main>
-    <!-- Home Section -->
-    <section id="home" class="section active">
-      <div class="container">
-        <h1>Welcome to My Portfolio!</h1>
+  <!-- Home Section -->
+  <section id="home" class="section">
+    <div class="home-content">
+      <div class="text-content">
+        <h1>Hi there!</h1>
+        <h2>I’m Micaella Joy</h2>
+        <p>IT professional focused on innovation and efficiency.</p>
       </div>
-    </section>
+      <div class="image-content">
+        <img src="ella.jpg.PNG" alt="Micaella Joy">
+      </div>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-      <div class="container about-content">
-        <div class="about-left">
-          <h2>About Me</h2>
-          <p>Hi! I’m Micaella Joy, an IT professional focused on innovation and efficiency. I strive to develop impactful projects and solutions.</p>
-          <div class="contact-info">
-            <p>Email: micaella.joy@gmail.com</p>
-            <p>Phone: 09123456789</p>
-            <p>LinkedIn: linkedin.com/micaellajoy</p>
-          </div>
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container about-content">
+      <div class="about-left">
+        <h2>About Me</h2>
+        <p>Hi! I’m Micaella Joy, an IT professional passionate about innovation and efficiency. I specialize in designing impactful projects and delivering efficient solutions.</p>
+        <div class="contact-info">
+          <p><strong>Email:</strong> micaella.joy@gmail.com</p>
+          <p><strong>Phone:</strong> 09123456789</p>
+          <p><strong>LinkedIn:</strong> linkedin.com/micaellajoy</p>
         </div>
-        <div class="about-right">
-          <img src="ella.jpg" alt="Micaella Joy">
+      </div>
+      <div class="about-right">
+        <img src="ella.jpg" alt="Micaella Joy" class="profile-pic">
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2>Services</h2>
+      <div class="services-list">
+        <div class="service-item">
+          <h3>Web Development</h3>
+          <p>Building responsive and user-friendly websites tailored to your needs.</p>
+        </div>
+        <div class="service-item">
+          <h3>Graphic Design</h3>
+          <p>Creating visually appealing designs to elevate your brand identity.</p>
+        </div>
+        <div class="service-item">
+          <h3>IT Consulting</h3>
+          <p>Providing expert advice to optimize your technological infrastructure.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-      <div class="container contact-content">
-        <h2>Contact Me</h2>
-        <p>We are looking forward to hearing from you soon!</p>
-        <form>
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name">
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Your email">
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Your message"></textarea>
-          </div>
-          <button type="submit">Send</button>
-        </form>
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="section">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <img src="project1.jpg" alt="Project 1">
+          <p>Project Title 1</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="project2.jpg" alt="Project 2">
+          <p>Project Title 2</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="project3.jpg" alt="Project 3">
+          <p>Project Title 3</p>
+        </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <script src="script.js"></script>
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container contact-content">
+      <h2>Contact Me</h2>
+      <p>Feel free to reach out for inquiries or collaborations.</p>
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Your email">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Your message"></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Micaella Joy. All Rights Reserved.</p>
+  </footer>
 </body>
 </html>
