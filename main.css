@@ -102,3 +102,97 @@ p {
 .contact-content button:hover {
   background-color: #555;
 }
+
+/* About Section */
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-left {
+  flex: 1;
+  padding: 20px;
+}
+
+.about-right {
+  flex: 1;
+  text-align: right;
+}
+
+.profile-pic {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+/* Services Section */
+.services-list {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.service-item {
+  background-color: #2d2d2d;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+}
+
+.service-item h3 {
+  margin-bottom: 10px;
+}
+
+/* Portfolio Section */
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.portfolio-item {
+  flex: 1 1 calc(33.333% - 20px);
+  background-color: #2d2d2d;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.portfolio-item img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Contact Section */
+.contact-content form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #444;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
