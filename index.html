@@ -1,113 +1,41 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Micaella Joy</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <nav class="navbar">
+        <div class="logo">MJ</div>
+        <ul class="nav-links">
+          <li><a href="#" class="nav-btn" data-page="home">Home</a></li>
+          <li><a href="#" class="nav-btn" data-page="about">About</a></li>
+          <li><a href="#" class="nav-btn" data-page="services">Services</a></li>
+          <li><a href="#" class="nav-btn" data-page="portfolio">Portfolio</a></li>
+          <li><a href="#" class="nav-btn" data-page="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hero-content">
+        <div class="text-content">
+          <h2>Hi there!</h2>
+          <h1>I'm Micaella Joy</h1>
+          <p>IT professional focused on innovation and efficiency.</p>
+        </div>
+        <div class="image-content">
+          <img src="ella.jpg.PNG" alt="Micaella Joy" class="profile-img">
+        </div>
+      </div>
+    </div>
+  </header>
 
-body {
-  font-family: 'Poppins', sans-serif; /* Aesthetic and readable font */
-  background-color: #f2f2f2;
-  color: #fff;
-}
+  <main id="main-content" class="content">
+    <!-- Dynamic content for other pages will be injected here -->
+  </main>
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-/* Hero Section */
-.hero {
-  background-image: url('background .JPG');
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-}
-
-.navbar {
-  position: absolute;
-  top: 20px;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 50px;
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 16px;
-  padding: 10px 20px;
-  border: 2px solid transparent;
-  transition: all 0.3s ease;
-  font-weight: 600;
-  border-radius: 5px;
-}
-
-.nav-links a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 2px solid #fff;
-  color: #fff;
-}
-
-.hero-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 50px;
-}
-
-.text-content {
-  max-width: 50%;
-  text-align: left;
-}
-
-.text-content h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  font-weight: 300;
-}
-
-.text-content h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-  font-weight: 600;
-}
-
-.text-content p {
-  font-size: 18px;
-  margin-bottom: 30px;
-  font-weight: 300;
-}
-
-.image-content {
-  max-width: 40%;
-}
-
-.profile-img {
-  width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-  /* Ensure no border or padding is applied */
-  border: none;
-  padding: 0;
-  margin: 0;
-}
+  <script src="script.js"></script>
+</body>
+</html>
