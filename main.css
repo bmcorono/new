@@ -106,5 +106,9 @@ body {
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
-  /* Removed white border */
+  /* Ensure no border or padding is applied */
+  border: none;
+  padding: 0;
+  margin: 0;
 }
+
