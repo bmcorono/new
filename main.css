@@ -6,38 +6,23 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif; /* Aesthetic and readable font */
-  background-color: #f2f2f2;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #333;
   color: #fff;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-/* Hero Section */
-.hero {
-  background-image: url('background .JPG');
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-}
-
+/* Navigation */
 .navbar {
-  position: absolute;
-  top: 20px;
-  left: 0;
+  position: fixed;
+  top: 0;
   width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 50px;
+  z-index: 1000;
 }
 
 .logo {
@@ -56,97 +41,70 @@ body {
   color: #fff;
   font-size: 16px;
   padding: 10px 20px;
-  border: 2px solid transparent;
-  transition: all 0.3s ease;
-  font-weight: 600;
-  border-radius: 5px;
+  transition: 0.3s;
 }
 
 .nav-links a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 2px solid #fff;
-  color: #fff;
+  background-color: #555;
+  border-radius: 5px;
 }
 
-.hero-content {
+/* Hero Section */
+.hero {
+  background-image: url('background .JPG');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 50px;
-}
-
-.text-content {
-  max-width: 50%;
-  text-align: left;
+  padding: 20px;
 }
 
 .text-content h2 {
-  font-size: 24px;
+  font-size: 32px;
   margin-bottom: 10px;
-  font-weight: 300;
 }
 
 .text-content h1 {
-  font-size: 48px;
+  font-size: 64px;
   margin-bottom: 20px;
-  font-weight: 600;
 }
 
 .text-content p {
-  font-size: 18px;
+  font-size: 24px;
   margin-bottom: 30px;
-  font-weight: 300;
-}
-
-.image-content {
-  max-width: 40%;
 }
 
 .profile-img {
+  max-width: 400px;
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
-  border: none;
-  padding: 0;
-  margin: 0;
 }
 
-/* Dynamic Content Styles */
-.content {
-  background-color: #333;
-  padding: 50px 20px;
-  text-align: center;
-  min-height: 200px;
-}
-
-.section {
-  margin: 20px auto;
-  max-width: 800px;
-  color: #fff;
-}
-
-.section h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
+/* Section Styles */
+.content-section {
+  padding: 80px 20px;
   text-align: center;
 }
 
-.section p {
-  font-size: 18px;
+.content-section h2 {
+  font-size: 36px;
   margin-bottom: 20px;
 }
 
 .box {
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .box-item {
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   border-radius: 8px;
-  padding: 15px;
+  padding: 20px;
   max-width: 300px;
   text-align: center;
 }
@@ -157,18 +115,30 @@ body {
   margin-bottom: 10px;
 }
 
-button {
+.contact-img {
+  max-width: 400px;
+  width: 100%;
+  margin: 20px auto;
+  display: block;
+}
+
+textarea {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.btn {
   display: inline-block;
   background-color: #fff;
   color: #333;
-  font-size: 16px;
   padding: 10px 20px;
-  margin-top: 20px;
   border: none;
-  cursor: pointer;
   border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-button:hover {
+.btn:hover {
   background-color: #ddd;
 }
