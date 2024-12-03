@@ -4,7 +4,144 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Micaella Joy Portfolio</title>
-  <link rel="stylesheet" href="main.css">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f2f2f2;
+      color: #fff;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    /* Hero Section */
+    .hero {
+      background-image: url('background.JPG');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .navbar {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 50px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+      padding: 10px 20px;
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+      font-weight: 600;
+      border-radius: 5px;
+    }
+
+    .nav-links a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      border: 2px solid #fff;
+      color: #fff;
+    }
+
+    #main-content {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    #main-content h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    #main-content p {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .next-btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .next-btn:hover {
+      background-color: #555;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .service, .project {
+      display: inline-block;
+      width: 30%;
+      margin: 1.5%;
+      background-color: #333;
+      padding: 20px;
+      border-radius: 10px;
+      color: #fff;
+    }
+
+    .contact-form textarea {
+      width: 80%;
+      padding: 10px;
+      margin: 20px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .contact-form button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #555;
+    }
+  </style>
 </head>
 <body>
   <header class="hero">
@@ -20,27 +157,102 @@
         </ul>
       </nav>
       <div id="dynamic-content">
-        <!-- Home Page Content -->
         <div id="home">
-          <div class="hero-content">
-            <div class="text-content">
-              <h2>Hi there!</h2>
-              <h1>I'm Micaella Joy</h1>
-              <p>IT professional focused on innovation and efficiency.</p>
-            </div>
-            <div class="image-content">
-              <img src="ella.jpg.PNG" alt="Micaella Joy" class="profile-img">
-            </div>
-          </div>
+          <h2>Hi there!</h2>
+          <h1>I'm Micaella Joy</h1>
+          <p>IT professional focused on innovation and efficiency.</p>
+          <img src="ella.jpg.PNG" alt="Micaella Joy" class="profile-img">
         </div>
       </div>
     </div>
   </header>
-  
-  <main id="main-content" class="content">
+
+  <main id="main-content">
     <!-- Dynamic content for other pages will be injected here -->
   </main>
 
-  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const navBtns = document.querySelectorAll(".nav-btn");
+      const dynamicContent = document.getElementById("main-content");
+
+      const pages = {
+        home: `
+          <h2>Hi there!</h2>
+          <h1>I'm Micaella Joy</h1>
+          <p>IT professional focused on innovation and efficiency.</p>
+          <img src="ella.jpg.PNG" alt="Micaella Joy" class="profile-img">
+        `,
+        about: `
+          <h1>About Me</h1>
+          <p><strong>Name:</strong> John Doe</p>
+          <p><strong>Age:</strong> 21</p>
+          <p><strong>Birthday:</strong> January 1, 2003</p>
+          <p><strong>School:</strong> XYZ University</p>
+          <p><strong>Course:</strong> BS in Information Technology</p>
+          <p><strong>Motivation:</strong> To use technology to solve real-world problems.</p>
+          <button class="next-btn" onclick="loadSkills()">Skills</button>
+        `,
+        skills: `
+          <h1>My Skills</h1>
+          <ul>
+            <li>Web Development</li>
+            <li>Mobile App Development</li>
+            <li>Graphic Design</li>
+            <li>Database Management</li>
+          </ul>
+          <img src="mica.PNG" alt="My Skills">
+        `,
+        services: `
+          <h1>Services</h1>
+          <div class="service">
+            <img src="webdevelopment.jpg" alt="Web Development">
+            <p><strong>Web Development:</strong> I create responsive websites.</p>
+          </div>
+          <div class="service">
+            <img src="mobileappdevelopment.jpg" alt="Mobile App Development">
+            <p><strong>Mobile App Development:</strong> I build engaging mobile applications.</p>
+          </div>
+          <div class="service">
+            <img src="seodevelopment.png" alt="SEO Optimization">
+            <p><strong>SEO Optimization:</strong> I improve website visibility.</p>
+          </div>
+        `,
+        portfolio: `
+          <h1>Portfolio</h1>
+          <div class="project">
+            <img src="YouTubeClone.jpg" alt="YouTube Clone">
+            <p><strong>YouTube Clone:</strong> Simulating YouTube's interface.</p>
+          </div>
+          <div class="project">
+            <img src="QUIZAPP.jpg" alt="Quiz App">
+            <p><strong>Quiz App:</strong> A dynamic quiz platform.</p>
+          </div>
+          <div class="project">
+            <img src="ProductLandingPage.jpg" alt="Product Landing Page">
+            <p><strong>Product Landing Page:</strong> Showcasing products attractively.</p>
+          </div>
+        `,
+        contact: `
+          <h1>Contact Me</h1>
+          <p><strong>Email:</strong> johndoe@example.com</p>
+          <p><strong>Phone:</strong> +123 456 7890</p>
+          <p><strong>Address:</strong> 1234 Main Street, Cityville</p>
+          <form class="contact-form">
+            <textarea rows="5" placeholder="Write your message..."></textarea>
+            <button type="submit">Send</button>
+          </form>
+        `,
+      };
+
+      navBtns.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          const page = e.target.getAttribute("data-page");
+          dynamicContent.innerHTML = pages[page] || `<p>Page not found.</p>`;
+        });
+      });
+    });
+  </script>
 </body>
 </html>
